@@ -1,5 +1,5 @@
 
-export GITLAB_API="https://source.golabs.io/api/v4"
+export GITLAB_API="https://gitlab.com/api/v4"
 
 # should've set env GLTOKEN as your access token
 # $1 is the group id you want to clone repos from
