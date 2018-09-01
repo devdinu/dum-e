@@ -14,7 +14,7 @@ set `GLTOKEN` the gitlab token for API access
 
 ### Golang
 - Hot reload: rebuild and run the services on any `*.go` files
-- `grld` which does `fswatch -r *.go | go build && ./$(basename $PWD)`
+- `grlod` which runs and does hot reload of the service, on any change of go files
 - `fw | echo` - pass any command to run on a filechange in dir.
 
 ##### Requirements
