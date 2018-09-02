@@ -1,6 +1,10 @@
 # Dum - E
 Helper scripts - which is of use at times, and at times needed the most. just like stark's [dum-e](http://ironman.wikia.com/wiki/Dum-E_and_U).
 
+
+## Installation
+if you're using ZSH clone the repository under $ZSH_CUSTOM directory
+
 ## Usage
 
 ### Gitlab Scripts
@@ -23,3 +27,9 @@ set `GLTOKEN` the gitlab token for API access
 ### Docker
 - `docker_clean`: does cleanup, by removing images with tag `<none>` and runs `system prune` 
 - `load_docker`: starts default machine, and loads docker
+
+### Git
+- `echo 'source git.sh' >> ~/.zshrc` to add the command
+- `pull_repos` finds all git directories in PWD recursively and pull the repos in parallel
+
+![pull_repos](./screenrec/pull_repos.gif)
