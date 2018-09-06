@@ -26,7 +26,6 @@ set `GLTOKEN` the gitlab token for API access
 
 ### Docker
 - `docker_clean`: does cleanup, by removing images with tag `<none>` and runs `system prune` 
-- `load_docker`: starts default machine, and loads docker
 
 ### Git
 - `echo 'source git.sh' >> ~/.zshrc` to add the command
