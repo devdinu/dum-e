@@ -7,13 +7,13 @@ function grun {
 }
 
 function ghotrun {
-    if [[ -z "$1" ]] ; then 
+    if [[ -z "$1" ]] ; then
         echo "name of process is required to do hot run"
         return -2
     fi
     name=$1
     epid=$(get_pid $name)
-    if [[ "$epid" -ne "" ]] ; then 
+    if [[ "$epid" -ne "" ]] ; then
         echo "killing process $name pid: $epid" && kill -9 $epid
     fi
     echo "running process pid: $name"
@@ -27,13 +27,9 @@ function grlod {
     #fswatch -o *.go | xargs -L1 $(echo $shell) -c "echo reloading.... && ghotrun $id"
 }
 
-export -f grun
-export -f ghotrun
-export -f grlod
-
 function get_pid {
-    if [[ -z "$1" ]] ; then 
-        echo "name of process is required to get pid" 
+    if [[ -z "$1" ]] ; then
+        echo "name of process is required to get pid"
         return -3
     fi
     name=$1

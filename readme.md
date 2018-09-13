@@ -3,7 +3,12 @@ Helper scripts - which is of use at times, and at times needed the most. just li
 
 
 ## Installation
-if you're using ZSH clone the repository under $ZSH_CUSTOM directory
+- if you're using ZSH clone the repository under $ZSH_CUSTOM directory
+- or source the scripts in `~/.zshrc` or `~/.bashrc` file
+```
+git clone https://github.com/devdinu/dum-e $HOME/dum-e
+echo  "for f in $HOME/dum-e/*.sh; do source $f; done" >> ~/.bashrc
+```
 
 ## Usage
 
