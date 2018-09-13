@@ -32,3 +32,6 @@ set `GLTOKEN` the gitlab token for API access
 - `pull_repos` finds all git directories in PWD recursively and pull the repos in parallel
 
 ![pull_repos](./screenrec/pull_repos.gif)
+
+### Miscellaneous
+- `wifirestart` - restarts wifi, using networksetup supported in Darwin

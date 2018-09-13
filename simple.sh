@@ -22,3 +22,15 @@ function docker_clean {
 }
 
 #---------------------------------------------------------------------------------
+
+function wifirestart {
+    if [[ -z "$(command -v networksetup)" ]]; then
+        echo "networksetup not supported"
+        return -10
+    fi
+    networksetup -setairportpower en0 off && networksetup -setairportpower en0 on
+}
+
+alias clean_test='RAILS_ENV=test bundle exec rake db:drop db:create:all db:migrate && bundle exec rake'
+alias be='RAILS_ENV=test bundle exec $*'
+alias bespec='RAILS_ENV=test bundle exec rspec $*'
