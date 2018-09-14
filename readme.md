@@ -38,5 +38,10 @@ set `GLTOKEN` the gitlab token for API access
 
 ![pull_repos](./screenrec/pull_repos.gif)
 
+### Docker, Kubernetes
+- `docker_clean` removes dangling images, and does sytem prune (container, network)
+
+![docker_clean](./screenrec/docker_clean.gif)
+
 ### Miscellaneous
 - `wifirestart` - restarts wifi, using networksetup supported in Darwin

@@ -17,8 +17,8 @@ function load_docker {
 }
 
 function docker_clean {
-    docker images -a | grep -iE '<none>' | awk '{print $3}' | xargs -L1 docker rmi -f
-    echo y | docker system prune
+    docker images -f "dangling=true" | xargs -L1 docker rmi -f
+    docker system prune -f #containers,dangling images, network, cache
 }
 
 #---------------------------------------------------------------------------------
