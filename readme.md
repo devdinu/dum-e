@@ -23,7 +23,8 @@ set `GLTOKEN` the gitlab token for API access
 
 ### Golang
 - Hot reload: rebuild and run the services on any `*.go` files
-- `grlod` which runs and does hot reload of the service, on any change of go files
+- `grlod` which runs and does hot reload of the service, on any change of go files. script is applicable for bash shell (`$BASH` var should have been set),
+running function in xargs/parallel `ZSH` is yet to be fixed.
 - `fw | echo` - pass any command to run on a filechange in dir.
 
 ##### Requirements
@@ -39,6 +40,7 @@ set `GLTOKEN` the gitlab token for API access
 ![pull_repos](./screenrec/pull_repos.gif)
 
 ### Docker, Kubernetes
+- `k` alias to kubectl
 - `docker_clean` removes dangling images, and does sytem prune (container, network)
 
 ![docker_clean](./screenrec/docker_clean.gif)
