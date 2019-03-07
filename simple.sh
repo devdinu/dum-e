@@ -31,6 +31,24 @@ function wifirestart {
     networksetup -setairportpower en0 off && networksetup -setairportpower en0 on
 }
 
+function tm {
+    s=$1
+    tmux attach -t $s || tmux new -s $s
+}
+
+function sshv {
+    [[ $1 -eq "" ]] && echo "mention an instance!" && exit 1
+    ssh $1 -t 'bash -o vi'
+}
+
 alias clean_test='RAILS_ENV=test bundle exec rake db:drop db:create:all db:migrate && bundle exec rake'
 alias be='RAILS_ENV=test bundle exec $*'
 alias bespec='RAILS_ENV=test bundle exec rspec $*'
+alias tmxsave='~/.tmux/plugins/tmux-resurrect/scripts/save.sh'
+alias tmxrestore='~/.tmux/plugins/tmux-resurrect/scripts/restort.sh'
+
+# command aliases/overrides
+
+alias ag='ag --hidden $*'
+alias cat='less $*'
+alias ssh='sshv $*'
