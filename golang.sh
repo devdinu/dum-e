@@ -52,3 +52,8 @@ if [[ "$BASH" -ne "" ]];then
 fi
 # Start pg server
 alias sredis='nohup redis-server $HOME/Config/redis.config &'
+
+
+function goclone() {
+    url=$1
+}

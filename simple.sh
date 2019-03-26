@@ -51,4 +51,4 @@ alias tmxrestore='~/.tmux/plugins/tmux-resurrect/scripts/restort.sh'
 
 alias ag='ag --hidden $*'
 alias cat='less $*'
-alias ssh='sshv $*'
+#alias ssh='sshv $*'
