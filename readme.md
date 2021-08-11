@@ -37,6 +37,13 @@ running function in xargs/parallel `ZSH` is yet to be fixed.
 - `echo 'source git.sh' >> ~/.zshrc` to add the command
 - `pull_repos` finds all git directories in PWD recursively and pull the repos in parallel
 
+**clone org repositories**
+To clone all repositories of an org you're part of, use the following command
+```
+gh_clone_org_repos <gh-username> <gh-api-token> <org-name>
+```
+ensure you give appropriate repo read permission while generating github api token
+
 ![pull_repos](./screenrec/pull_repos.gif)
 
 ### Docker, Kubernetes
