@@ -41,6 +41,11 @@ function sshv {
     ssh $1 -t 'bash -o vi'
 }
 
+function ip {
+    val=$(ifconfig en0  | grep -iE '([0-9]+\.){3}.[0-9]+' -o  | grep -Ev '([0-9]+\.){3}255')
+    echo $val
+}
+
 alias clean_test='RAILS_ENV=test bundle exec rake db:drop db:create:all db:migrate && bundle exec rake'
 alias be='RAILS_ENV=test bundle exec $*'
 alias bespec='RAILS_ENV=test bundle exec rspec $*'

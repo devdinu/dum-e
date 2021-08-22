@@ -34,13 +34,13 @@ running function in xargs/parallel `ZSH` is yet to be fixed.
 - `docker_clean`: does cleanup, by removing images with tag `<none>` and runs `system prune` 
 
 ### Git
-- `echo 'source git.sh' >> ~/.zshrc` to add the command
+- `echo 'source commands.sh' >> ~/.zshrc` to add the command
 - `pull_repos` finds all git directories in PWD recursively and pull the repos in parallel
 
 **clone org repositories**
 To clone all repositories of an org you're part of, use the following command
 ```
-gh_clone_org_repos <gh-username> <gh-api-token> <org-name>
+gh_clone_repos -u <gh-username> -t <gh-api-token> -o <org-name>
 ```
 ensure you give appropriate repo read permission while generating github api token
 
